@@ -1,8 +1,5 @@
 return {
     {
-        "kkoomen/vim-doge",
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         keys = {
             { "<leader>fs", "<cmd>write<cr>", desc = "Save file" },

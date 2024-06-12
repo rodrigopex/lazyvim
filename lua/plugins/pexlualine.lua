@@ -12,7 +12,7 @@ return {
         -- Color table for highlights
         -- stylua: ignore
         local colors = {
-        bg       = '#1E2127',
+        bg       = '#18171F',
         fg       = '#bbc2cf',
         yellow   = '#ECBE7B',
         cyan     = '#008080',
@@ -38,7 +38,7 @@ return {
                 return gitdir and #gitdir > 0 and #gitdir < #filepath
             end,
             has_attached_client = function()
-                local clients = vim.lsp.get_active_clients()
+                local clients = vim.lsp.get_clients()
                 return next(clients) ~= nil
             end,
         }
@@ -172,7 +172,7 @@ return {
             function()
                 local msg = ""
                 local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-                local clients = vim.lsp.get_active_clients()
+                local clients = vim.lsp.get_clients()
                 if next(clients) == nil then
                     return msg
                 end

@@ -47,7 +47,7 @@ return {
                         separator = "",
                         padding = { left = 1, right = 0 },
                     },
-                    { LazyVim.lualine.pretty_path() },
+                    { LazyVim.lualine.pretty_path(), separator = "" },
                 },
                 lualine_x = {
                     {
@@ -71,8 +71,7 @@ return {
                             local clients = vim.lsp.get_clients()
                             return next(clients) ~= nil
                         end,
-                        icon = " LSP:",
-                        -- color = { fg = "#ffffff", gui = "bold" },
+                        icon = " ",
                     },
           -- stylua: ignore
           {

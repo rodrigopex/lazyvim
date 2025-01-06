@@ -6,5 +6,5 @@ local opt = vim.opt
 opt.tabstop = 4
 opt.shiftwidth = 4
 
-vim.g.lazyvim_python_lsp = "ruff_lsp"
-vim.g.lazyvim_python_ruff = "ruff_lsp"
+vim.g.lazyvim_python_lsp = "ruff"
+vim.g.lazyvim_python_ruff = "ruff"

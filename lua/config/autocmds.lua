@@ -2,7 +2,17 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 --
 -- Add any additional autocmds here
--- with `vim.api.nvim_create_autocmd`
 --
--- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- autocmd FileType cpp setlocal commentstring=// %s
+-- Check if we need to reload the file when it changed
+local function augroup(name)
+    return vim.api.nvim_create_augroup("lazyvim_rodrigopex_" .. name, { clear = true })
+end
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "c", "cpp" },
+    group = augroup("new_c_comment"),
+    callback = function()
+        vim.opt_local.commentstring = "// %s"
+    end,
+})

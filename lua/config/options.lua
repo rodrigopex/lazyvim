@@ -8,3 +8,4 @@ opt.shiftwidth = 4
 
 vim.g.lazyvim_python_lsp = "ruff"
 vim.g.lazyvim_python_ruff = "ruff"
+vim.g.lazyvim_picker = "snacks"

@@ -1,3 +1,6 @@
+if true then
+    return {}
+end
 return {
     { "navarasu/onedark.nvim", opts = { style = "cool" } },
     { "rebelot/kanagawa.nvim", opts = { style = "lotus" } },
